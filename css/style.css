@@ -1,0 +1,119 @@
+/* Algemeen - Spotify look */
+body {
+  margin: 0;
+  font-family: "Circular Spotify", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Hamburger menu toggle */
+#hamburgerBtn {
+  position: fixed; top: 10px; left: 10px; z-index: 1100; font-size: 1.5rem;
+  background-color: #1DB954;
+  border: none; color: #fff; border-radius: 4px; cursor: pointer;
+}
+#hamburgerBtn:hover { background-color: #1ed760; }
+
+#adminMenu {
+  position: fixed; top: 0; left: 0; height: 100%; width: 250px;
+  background-color: #181818;
+  color: #fff;
+  transform: translateX(-100%); transition: transform 0.3s ease; z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+#adminMenu.open { transform: translateX(0); }
+#adminMenu input, #adminMenu button {
+  width: calc(100% - 1rem);
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0.5rem;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  background-color: #282828;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+#menuCloseBtn { font-size: 1.2rem; margin-bottom: 1rem; }
+
+/* Admin panel */
+#adminPanel {
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #121212;
+  color: #fff;
+}
+.deleteBtn {
+  cursor: pointer;
+  color: #1DB954;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.deleteBtn:hover { color: #1ed760; }
+
+/* Startpagina */
+#startPage {
+  overflow-y: auto;
+  height: 100vh;
+  background: #121212;
+  padding: 0 1rem 1rem 1rem;
+}
+#startPage h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Grid van playlists */
+#playlistsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.playlistCard {
+  cursor: pointer;
+  text-align: center;
+  background-color: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.playlistCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+.playlistCard img { width: 100%; display: block; }
+.playlistCard p { margin: 0.5rem 0; font-weight: 600; font-size: 1rem; color: #fff; }
+
+/* Playlist fullscreen player */
+#playlistScreen {
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0; padding: 0;
+}
+#playlistContainer {
+  flex: 1;
+  display: flex;
+  background-color: #121212;
+}
+#playlistContainer iframe { width: 100%; height: 100%; border: none; }
+#backBtn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #1DB954;
+  border-radius: 4px;
+  margin: 0.5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+#backBtn:hover { background-color: #1ed760; }

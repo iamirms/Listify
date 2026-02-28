@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Playlist App</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#121212">
+</head>
+<body>
+
+<!-- Hamburger menu -->
+<button id="hamburgerBtn">☰</button>
+<div id="adminMenu">
+  <button id="menuCloseBtn">✖</button>
+  <h2>Admin Login</h2>
+  <input type="password" id="adminPasswordInput" placeholder="Wachtwoord">
+  <button id="adminLoginBtn">Inloggen / Aanmaken</button>
+</div>
+
+<!-- Admin panel full-screen -->
+<div id="adminPanel">
+  <h2>Admin Panel</h2>
+  <button id="logoutBtn">Terug naar speler</button>
+
+  <h3>Playlists beheren</h3>
+  <input type="text" id="newPlaylistInput" placeholder="Plak Spotify playlist link">
+  <button id="addPlaylistBtn">Toevoegen</button>
+  <div id="playlistsList"></div>
+
+  <h3>Wachtwoord wijzigen</h3>
+  <input type="password" id="currentPassword" placeholder="Huidig wachtwoord">
+  <input type="password" id="newPassword" placeholder="Nieuw wachtwoord">
+  <button id="changePasswordBtn">Wijzig wachtwoord</button>
+</div>
+
+<!-- Startpagina -->
+<div id="startPage">
+  <h2>Beschikbare Playlists</h2>
+  <div id="playlistsGrid"></div>
+</div>
+
+<!-- Playlist detail scherm -->
+<div id="playlistScreen">
+  <button id="backBtn">← Terug</button>
+  <div id="playlistContainer"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
